@@ -21,6 +21,7 @@
   "scripts": {
     "clean": "rm -fR lib",
     "build": "tsc",
+    "postinstall": "npm run build",
     "dev": "yarn clean && tsc -w",
     "test": "NODE_OPTIONS=--experimental-vm-modules dotenv -e .env -- jest --config ./jest.json --runInBand --detectOpenHandles",
     "ts-node": "ts-node",
